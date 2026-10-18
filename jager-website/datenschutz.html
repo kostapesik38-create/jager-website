@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutz – Jager Reifenservice</title>
+  <meta name="description" content="Datenschutzerklärung von Reifenservice Jager, Erolzheim.">
+  <!-- Пока сайт учебный, просим Google его не показывать.
+       Удалите эту строку, когда сайт станет настоящим. -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <!-- Шрифты грузим заранее, чтобы текст сразу был красивым -->
+  <link rel="preload" href="fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Шапка: логотип, меню, кнопка записи ===== -->
+  <header class="site-header container">
+    <a href="index.html" class="logo" aria-label="Jager – Startseite">
+      <img src="img/logo.svg" width="40" height="40" alt="">
+      <span class="logo-text">JAGER</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="#contacts">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-accent btn-small header-cta" href="index.html#booking">Termin buchen</a>
+
+    <!-- Кнопка мобильного меню (видна только на телефоне) -->
+    <button type="button" class="menu-toggle" aria-label="Menü" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </header>
+
+  <!-- Мобильное меню: скрыто, пока не нажмут на кнопку (см. js/main.js) -->
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Menü" hidden>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="#contacts">Kontakt</a>
+    <a class="btn btn-accent" href="index.html#booking">Termin buchen</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== Datenschutzerklärung =====
+         ВНИМАНИЕ: это шаблон под этот сайт (хостинг Netlify,
+         форма записи через Netlify Forms, шрифты лежат на сервере,
+         нет cookies и аналитики). Если добавите Google Maps,
+         аналитику или другие сервисы, текст нужно дополнить.
+         Шаблон не заменяет проверку юристом. -->
+    <section class="legal container">
+      <h1>Daten<span class="text-gold">schutz</span></h1>
+      <p class="legal-intro">Stand: Oktober 2026</p>
+      <div class="legal-sections">
+        <div class="legal-section">
+          <h2>1. Verantwortlicher</h2>
+          <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist Andreas Jager, Reifenservice Jager, Schlosserstraße 13, 88453 Erolzheim, Telefon +49 160 1248726, E-Mail <a href="mailto:info@jager-reifen.de">info@jager-reifen.de</a>.</p>
+        </div>
+        <div class="legal-section">
+          <h2>2. Hosting</h2>
+          <p>Diese Website wird bei Netlify, Inc., San Francisco, USA, gehostet. Beim Aufruf der Seiten verarbeitet Netlify automatisch technische Zugriffsdaten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite und Browsertyp. Das ist nötig, um die Website sicher und zuverlässig auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+          <p>Dabei können Daten in die USA übermittelt werden. Grundlage dafür sind der Vertrag zur Auftragsverarbeitung mit Netlify und die darin enthaltenen Standardvertragsklauseln der EU-Kommission sowie, soweit Netlify zertifiziert ist, das EU-U.S. Data Privacy Framework.</p>
+        </div>
+        <div class="legal-section">
+          <h2>3. Buchungsformular</h2>
+          <p>Wenn Sie unser Buchungsformular nutzen, verarbeiten wir Ihren Namen, Ihre Telefonnummer und die gewünschte Leistung. Die Angaben werden über den Formulardienst von Netlify übermittelt und gespeichert. Wir nutzen sie ausschließlich, um Sie zurückzurufen und Ihren Termin zu vereinbaren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags).</p>
+        </div>
+        <div class="legal-section">
+          <h2>4. Kontakt per Telefon und WhatsApp</h2>
+          <p>Wenn Sie uns anrufen oder schreiben, verarbeiten wir Ihre Angaben, um Ihr Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. b DSGVO). Für Nachrichten über WhatsApp gelten zusätzlich die Datenschutzbestimmungen der WhatsApp Ireland Limited.</p>
+        </div>
+        <div class="legal-section">
+          <h2>5. Schriften, Cookies und Analyse</h2>
+          <p>Die Schriften dieser Website liegen auf unserem eigenen Server; beim Laden wird keine Verbindung zu Google oder anderen Anbietern hergestellt. Wir setzen keine Cookies und keine Analyse- oder Tracking-Werkzeuge ein.</p>
+        </div>
+        <div class="legal-section">
+          <h2>6. Speicherdauer</h2>
+          <p>Ihre Anfragedaten löschen wir, sobald der Termin erledigt ist, es sei denn, gesetzliche Aufbewahrungsfristen verlangen eine längere Speicherung. Technische Zugriffsdaten werden vom Hosting-Anbieter nach kurzer Zeit gelöscht.</p>
+        </div>
+        <div class="legal-section">
+          <h2>7. Ihre Rechte</h2>
+          <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten, auf Datenübertragbarkeit sowie auf Widerspruch gegen eine Verarbeitung nach Art. 6 Abs. 1 lit. f DSGVO. Außerdem können Sie sich beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Baden-Württemberg beschweren.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал: контакты и ссылки на Impressum / Datenschutz ===== -->
+  <footer id="contacts" class="site-footer container">
+    <div class="footer-top">
+      <a href="index.html" class="logo" aria-label="Jager – Startseite">
+        <img src="img/logo.svg" width="36" height="36" alt="">
+        <span class="logo-text">JAGER</span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="label">Adresse</div>
+          <div>Schlosserstraße 13, Erolzheim</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Öffnungszeiten</div>
+          <div>Mo–Sa, 15:00–21:00 Uhr</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Kontakt</div>
+          <a href="tel:+491601248726">+49 160 1248726</a>
+          <a href="https://wa.me/491601248726">WhatsApp: +49 160 1248726</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jager. Alle Rechte vorbehalten.</span>
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

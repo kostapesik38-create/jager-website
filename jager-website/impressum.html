@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum – Jager Reifenservice</title>
+  <meta name="description" content="Impressum von Reifenservice Jager, Erolzheim.">
+  <!-- Пока сайт учебный, просим Google его не показывать.
+       Удалите эту строку, когда сайт станет настоящим. -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <!-- Шрифты грузим заранее, чтобы текст сразу был красивым -->
+  <link rel="preload" href="fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Шапка: логотип, меню, кнопка записи ===== -->
+  <header class="site-header container">
+    <a href="index.html" class="logo" aria-label="Jager – Startseite">
+      <img src="img/logo.svg" width="40" height="40" alt="">
+      <span class="logo-text">JAGER</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="#contacts">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-accent btn-small header-cta" href="index.html#booking">Termin buchen</a>
+
+    <!-- Кнопка мобильного меню (видна только на телефоне) -->
+    <button type="button" class="menu-toggle" aria-label="Menü" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </header>
+
+  <!-- Мобильное меню: скрыто, пока не нажмут на кнопку (см. js/main.js) -->
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Menü" hidden>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="#contacts">Kontakt</a>
+    <a class="btn btn-accent" href="index.html#booking">Termin buchen</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== Impressum =====
+         ВНИМАНИЕ: это шаблон. Все данные ниже нужно заменить
+         настоящими данными владельца бизнеса. Строку с USt-IdNr.
+         удалите, если у владельца её нет. Шаблон не заменяет
+         проверку юристом. -->
+    <section class="legal container">
+      <h1>Impressum</h1>
+      <p class="legal-intro">Angaben gemäß § 5 DDG</p>
+      <dl class="legal-table">
+        <div class="legal-row">
+          <dt>Unternehmen</dt>
+          <dd>Reifenservice Jager</dd>
+        </div>
+        <div class="legal-row">
+          <dt>Inhaber</dt>
+          <dd>Andreas Jager</dd>
+        </div>
+        <div class="legal-row">
+          <dt>Anschrift</dt>
+          <dd>Schlosserstraße 13, 88453 Erolzheim</dd>
+        </div>
+        <div class="legal-row">
+          <dt>Telefon</dt>
+          <dd><a href="tel:+491601248726">+49 160 1248726</a></dd>
+        </div>
+        <div class="legal-row">
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:info@jager-reifen.de">info@jager-reifen.de</a></dd>
+        </div>
+        <div class="legal-row">
+          <dt>Umsatzsteuer-ID</dt>
+          <dd>DE123456789 (gemäß § 27a UStG)</dd>
+        </div>
+        <div class="legal-row">
+          <dt>Verantwortlich für den Inhalt</dt>
+          <dd>Andreas Jager, Anschrift wie oben (§ 18 Abs. 2 MStV)</dd>
+        </div>
+        <div class="legal-row">
+          <dt>Verbraucherstreitbeilegung</dt>
+          <dd>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал: контакты и ссылки на Impressum / Datenschutz ===== -->
+  <footer id="contacts" class="site-footer container">
+    <div class="footer-top">
+      <a href="index.html" class="logo" aria-label="Jager – Startseite">
+        <img src="img/logo.svg" width="36" height="36" alt="">
+        <span class="logo-text">JAGER</span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="label">Adresse</div>
+          <div>Schlosserstraße 13, Erolzheim</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Öffnungszeiten</div>
+          <div>Mo–Sa, 15:00–21:00 Uhr</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Kontakt</div>
+          <a href="tel:+491601248726">+49 160 1248726</a>
+          <a href="https://wa.me/491601248726">WhatsApp: +49 160 1248726</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jager. Alle Rechte vorbehalten.</span>
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html" aria-current="page">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

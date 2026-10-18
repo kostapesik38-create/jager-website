@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leistungen und Preise – Jager Reifenservice</title>
+  <meta name="description" content="Preisliste von Jager in Erolzheim: Reifenwechsel, Auswuchten, Reifenpanne reparieren und Felgen richten.">
+  <!-- Пока сайт учебный, просим Google его не показывать.
+       Удалите эту строку, когда сайт станет настоящим. -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <!-- Шрифты грузим заранее, чтобы текст сразу был красивым -->
+  <link rel="preload" href="fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Шапка: логотип, меню, кнопка записи ===== -->
+  <header class="site-header container">
+    <a href="index.html" class="logo" aria-label="Jager – Startseite">
+      <img src="img/logo.svg" width="40" height="40" alt="">
+      <span class="logo-text">JAGER</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="leistungen.html" aria-current="page">Leistungen</a>
+      <a href="#contacts">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-accent btn-small header-cta" href="index.html#booking">Termin buchen</a>
+
+    <!-- Кнопка мобильного меню (видна только на телефоне) -->
+    <button type="button" class="menu-toggle" aria-label="Menü" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </header>
+
+  <!-- Мобильное меню: скрыто, пока не нажмут на кнопку (см. js/main.js) -->
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Menü" hidden>
+    <a href="leistungen.html" aria-current="page">Leistungen</a>
+    <a href="#contacts">Kontakt</a>
+    <a class="btn btn-accent" href="index.html#booking">Termin buchen</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== Заголовок страницы ===== -->
+    <section class="page-title container">
+      <div class="eyebrow">Preisliste</div>
+      <h1>Leistungen <span class="text-gold">und Preise</span></h1>
+    </section>
+
+    <!-- ===== Прайс-лист. Чтобы поменять цену, исправьте число в строке ===== -->
+    <section class="price-groups container">
+
+      <div class="price-group">
+        <h2>Reifen</h2>
+        <ul class="price-list">
+          <li><span class="service">Wechsel Komplettsatz (4 Räder)</span><span class="price">45 €</span></li>
+          <li><span class="service">Wechsel einzelner Reifen</span><span class="price">15 €</span></li>
+          <li><span class="service">Auswuchten pro Rad</span><span class="price">25 €</span></li>
+        </ul>
+      </div>
+
+      <div class="price-group">
+        <h2>Reparatur</h2>
+        <ul class="price-list">
+          <li><span class="service">Reifenpanne reparieren</span><span class="price">15 €</span></li>
+          <li><span class="service">Stahlfelge richten</span><span class="price">10 €</span></li>
+          <li><span class="service">Leichtmetallfelge richten</span><span class="price">60 €</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ===== Жёлтый блок с призывом записаться ===== -->
+    <section class="container section-spaced">
+      <div class="accent-box cta-box">
+        <div class="box-text">
+          <h2>Leistung nicht gefunden?</h2>
+          <p>Rufen Sie an – wir beraten Sie und finden einen Termin.</p>
+        </div>
+        <a class="btn btn-dark" href="index.html#booking">Online buchen</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал: контакты и ссылки на Impressum / Datenschutz ===== -->
+  <footer id="contacts" class="site-footer container">
+    <div class="footer-top">
+      <a href="index.html" class="logo" aria-label="Jager – Startseite">
+        <img src="img/logo.svg" width="36" height="36" alt="">
+        <span class="logo-text">JAGER</span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="label">Adresse</div>
+          <div>Schlosserstraße 13, Erolzheim</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Öffnungszeiten</div>
+          <div>Mo–Sa, 15:00–21:00 Uhr</div>
+        </div>
+        <div class="footer-col">
+          <div class="label">Kontakt</div>
+          <a href="tel:+491601248726">+49 160 1248726</a>
+          <a href="https://wa.me/491601248726">WhatsApp: +49 160 1248726</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jager. Alle Rechte vorbehalten.</span>
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
