@@ -63,3 +63,34 @@ if (window.gsap && wheel && !reduceMotion) {
     repeat: -1           // повторять бесконечно
   });
 }
+// Форма записи: сохраняем заявку в Netlify и открываем WhatsApp
+const bookingForm = document.querySelector('.booking-form');
+const whatsappNumber = '491601248726'; // номер без +, пробелов и нуля в начале
+
+if (bookingForm) {
+  bookingForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // не уходим сразу на страницу danke.html
+    const data = new FormData(bookingForm);
+
+    // 1. копия заявки в Netlify (раздел Forms)
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      });
+    } catch (error) {
+      // если не получилось, всё равно открываем WhatsApp
+    }
+
+    // 2. готовый текст сообщения
+    const text =
+      'Hallo, ich möchte einen Termin buchen.\n' +
+      'Name: ' + data.get('name') + '\n' +
+      'Telefon: ' + data.get('telefon') + '\n' +
+      'Leistung: ' + data.get('leistung');
+
+    // 3. открываем WhatsApp с этим текстом
+    window.location.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+  });
+}
