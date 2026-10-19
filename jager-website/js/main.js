@@ -23,3 +23,27 @@ if (menuButton && mobileMenu) {
     });
   });
 }
+// Появление блоков при прокрутке
+const revealItems = document.querySelectorAll('.info-card, #booking, .site-footer');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+  revealItems.forEach((item, i) => {
+    item.classList.add('reveal');
+    // карточки появляются по очереди, с небольшой задержкой
+    if (item.classList.contains('info-card')) {
+      item.style.transitionDelay = (i * 0.15) + 's';
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // показываем один раз
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealItems.forEach((item) => observer.observe(item));
+}

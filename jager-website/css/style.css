@@ -712,7 +712,7 @@ svg {
 .hero h1 span,
 .hero-btns,
 .hero-image {
-  animation: appear .9s ease-out both;
+  animation: appear .12s ease-out both;
 }
 
 /* каждый элемент стартует чуть позже предыдущего */
@@ -727,4 +727,16 @@ svg {
   .accent-line, .hero h1 span, .hero-btns, .hero-image {
     animation: none;
   }
+}
+/* ---------- Появление блоков при прокрутке ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s ease-out, transform .7s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
