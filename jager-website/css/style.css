@@ -701,3 +701,30 @@ svg {
     margin-top: 64px;
   }
 }
+/* ---------- Анимация появления главного экрана ---------- */
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.accent-line,
+.hero h1 span,
+.hero-btns,
+.hero-image {
+  animation: appear .9s ease-out both;
+}
+
+/* каждый элемент стартует чуть позже предыдущего */
+.hero h1 span:nth-child(1) { animation-delay: .15s; }
+.hero h1 span:nth-child(2) { animation-delay: .3s; }
+.hero h1 span:nth-child(3) { animation-delay: .45s; }
+.hero-btns                 { animation-delay: .65s; }
+.hero-image                { animation-delay: .3s; }
+
+/* если человек отключил анимации в системе, показываем всё сразу */
+@media (prefers-reduced-motion: reduce) {
+  .accent-line, .hero h1 span, .hero-btns, .hero-image {
+    animation: none;
+  }
+}
