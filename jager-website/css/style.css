@@ -704,15 +704,15 @@ svg {
 /* ---------- Анимация появления главного экрана ---------- */
 
 @keyframes appear {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(16px); filter: blur(4px); }
+ to   { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
 .accent-line,
 .hero h1 span,
 .hero-btns,
 .hero-image {
-  animation: appear .12s ease-out both;
+animation: appear 1.4s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 /* каждый элемент стартует чуть позже предыдущего */
