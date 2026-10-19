@@ -49,6 +49,8 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   }, { threshold: 0.15 });
 
   revealItems.forEach((item) => observer.observe(item));
+
+
 }// GSAP: колесо на главной медленно парит вверх-вниз
 const wheel = document.querySelector('.hero-image svg');
 
