@@ -740,3 +740,20 @@ svg {
   opacity: 1;
   transform: translateY(0);
 }
+/* ---------- Появление заголовка на внутренних страницах ---------- */
+
+.page-title > *,
+.legal > h1,
+.legal-intro {
+  animation: appear .8s ease-out both;
+}
+
+.page-title > *:nth-child(2) { animation-delay: .15s; }
+.page-title > *:nth-child(3) { animation-delay: .3s; }
+.legal-intro                 { animation-delay: .15s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-title > *, .legal > h1, .legal-intro {
+    animation: none;
+  }
+}

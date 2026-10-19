@@ -23,16 +23,19 @@ if (menuButton && mobileMenu) {
     });
   });
 }
-// Появление блоков при прокрутке
-const revealItems = document.querySelectorAll('.info-card, #booking, .site-footer');
+// Появление блоков при прокрутке (работает на всех страницах)
+const revealItems = document.querySelectorAll(
+  '.info-card, #booking, .price-group, .cta-box, .legal-section, .legal-row, .site-footer'
+);
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if ('IntersectionObserver' in window && !reduceMotion) {
-  revealItems.forEach((item, i) => {
+  revealItems.forEach((item) => {
     item.classList.add('reveal');
-    // карточки появляются по очереди, с небольшой задержкой
-    if (item.classList.contains('info-card')) {
-      item.style.transitionDelay = (i * 0.15) + 's';
+    // карточки и группы цен, стоящие рядом, появляются по очереди
+    if (item.matches('.info-card, .price-group')) {
+      const position = [...item.parentElement.children].indexOf(item);
+      item.style.transitionDelay = (position * 0.15) + 's';
     }
   });
 
