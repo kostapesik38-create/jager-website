@@ -48,7 +48,7 @@
   --line-strong: #3a3935;   /* рамки кнопок */
   --input-bg: #fff8d6;      /* фон полей формы */
 
-  --font-body: 'Onest', system-ui, sans-serif;
+    --font-title: 'Unbounded', system-ui, sans-serif;
   --font-title: 'Oswald', system-ui, sans-serif;
   --font-brand: 'Unbounded', system-ui, sans-serif;
 
