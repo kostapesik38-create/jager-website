@@ -756,3 +756,122 @@ animation: appear 1.4s cubic-bezier(.22, 1, .36, 1) both;
     animation: none;
   }
 }
+/* ---------- Логотип в шапке крутится, как колесо ----------
+   Один оборот за 3 секунды, без остановки (вариант A). */
+
+@keyframes logo-spin {
+  to { transform: rotate(360deg); }
+}
+
+.site-header .logo img {
+  animation: logo-spin 3s linear infinite;
+}
+
+/* если человек отключил анимации в системе, логотип стоит */
+@media (prefers-reduced-motion: reduce) {
+  .site-header .logo img {
+    animation: none;
+  }
+}
+
+
+/* ---------- Блок «Werkstatt» и галерея ---------- */
+
+.werkstatt {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+  gap: 32px 48px;
+  align-items: center;
+}
+
+.werkstatt-photo,
+.galerie figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+.werkstatt-photo img,
+.galerie img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.werkstatt-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.werkstatt-text h2,
+.galerie-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.werkstatt-text p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.galerie-title {
+  margin-bottom: 24px;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.galerie figure {
+  position: relative;
+}
+
+.galerie img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.galerie figure:hover img {
+  transform: scale(1.05);
+}
+
+.galerie figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 14px 12px;
+  font-weight: 600;
+  background: linear-gradient(to top, rgba(15,15,14,.85), rgba(15,15,14,0));
+}
+
+@media (max-width: 900px) {
+  .galerie { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .werkstatt-text h2,
+  .galerie-title { font-size: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galerie img { transition: none; }
+}
+
+
+/* ---------- Leistungen: Fotopaar über jeder Preisgruppe ---------- */
+
+.galerie-paar {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 28px;
+}

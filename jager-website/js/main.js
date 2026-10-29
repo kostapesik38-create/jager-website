@@ -25,7 +25,7 @@ if (menuButton && mobileMenu) {
 }
 // Появление блоков при прокрутке (работает на всех страницах)
 const revealItems = document.querySelectorAll(
-  '.info-card, #booking, .price-group, .cta-box, .legal-section, .legal-row, .site-footer'
+  '.info-card, .werkstatt, .galerie figure, #booking, .price-group, .cta-box, .legal-section, .legal-row, .site-footer'
 );
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
